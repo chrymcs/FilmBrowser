@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <iostream>
 using namespace std;
 
 class Genre {
@@ -35,8 +36,74 @@ public:
         description = getGenreDescription(t);
     }
     GENRETYPE getGenreType() {return type;} ;
-    string getGenreDescription(enum GENRETYPE g);
+    string getGenreDescription(enum GENRETYPE g);   
 };
+
+ostream& operator<<(ostream& os, Genre::GENRETYPE gen) {
+    switch(gen) {
+        case 1:
+            os << "Action";
+            break;
+        case 2:
+            os << "Adventure";
+            break; 
+        case 3:
+            os << "Animation";
+            break;
+        case 4:
+            os << "Biography";
+            break;
+        case 5:
+            os << "Comedy";
+            break;
+        case 6:
+            os << "Crime";
+            break;
+        case 7:
+            os << "Documentary";
+            break;
+        case 8:
+            os << "Drama";
+            break;
+        case 9:
+            os << "Family";
+            break;
+        case 10:
+            os << "Fantasy";
+            break;
+        case 11:
+            os << "History";
+            break;
+        case 12:
+            os << "Horror";
+            break;
+        case 13:
+            os << "Musical";
+            break;
+        case 14:
+            os << "Mystery";
+            break;
+        case 15:
+            os << "News";
+            break;
+        case 16:
+            os << "Romance";
+            break;
+        case 17:
+            os << "Scifi";
+            break;
+        case 18:
+            os << "Thriller";
+            break;
+        case 19:
+            os << "War";
+            break;
+        case 20:
+            os << "Western";
+            break;
+    }
+    return os;
+}
 
 string Genre::getGenreDescription(enum GENRETYPE g) {
     switch (g) {

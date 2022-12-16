@@ -9,14 +9,15 @@ using namespace std;
 class Movie {
     string name; //movie's title
     string date; //date of production
-    Director** directors; //a movie may have 1 or more directors
+    Director* directors; //a movie may have 1 or more directors
     int numOfDirectors;
-    Actor** actors; //a movie has many actors
+    Actor* actors; //a movie has many actors
     int numOfActors;
-    Genre::GENRETYPE* genre; //film genre
+    Genre* genre; //film genre
+    int numOfGenres;
     //Example: “Schindler's List", 1993, "Steven Spielberg", "Liam Neeson, Ralph Fiennes, Ben Kingsley", "drama, history"
 public:
-    Movie(string n, string d, Director** dir, int numOfDirs, Actor** act, int numOfActs, Genre::GENRETYPE* g) {
+    Movie(string n, string d, Director* dir, int numOfDirs, Actor* act, int numOfActs, Genre* g, int numOfGens) {
         name = n;
         date = d;
         directors = dir;
@@ -24,14 +25,16 @@ public:
         actors = act;
         numOfActors = numOfActs;
         genre = g;
+        numOfGenres = numOfGens;
     };
     string getName() {return name;}
     string getDate() {return date;}
-    Director** getFirstDirector() {return directors;}
+    Director* getFirstDirector() {return directors;}
     int getNumOfDirectors() {return numOfDirectors;}
-    Actor** getFirstActor() {return actors;}
+    Actor* getFirstActor() {return actors;}
     int getNumOfActors() {return numOfActors;}
-    Genre::GENRETYPE* getFilmGenre() {return genre;}   
+    Genre* getFilmGenre() {return genre;}
+    int getNumOfGenres() {return numOfGenres;}
 };
 
 /* TODO

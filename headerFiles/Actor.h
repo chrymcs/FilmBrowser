@@ -6,5 +6,5 @@ class Actor {
     Actor(string n) {
         name = n;
     }
-    string getName() { return name; }
+    string getActorName() { return name; }
 };

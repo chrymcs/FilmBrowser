@@ -9,5 +9,5 @@ public:
     Director(string n) {
         name = n;
     }
-    string getName() { return name; }
+    string getDirectorName() { return name; }
 };
